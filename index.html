@@ -4,87 +4,57 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <!-- VUE JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <!-- FONTS -->
-    <link rel="stylesheet" href="https://use.typekit.net/tgb3mti.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300,400;600&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <title>Hello, world!</title>
+    <title>Vue JS Tendies Tester</title>
   </head>
   <body>
-    <div class="main bg-light-gray">
+    <!-- SITE HEADER -->
+    <div id="site-header" class="site-header">
+      <div class="site-header-logo">
+        <img src="img/wsb-logo.png" alt="wall street bets logo">
+      </div>
+      <ul class="nav site-header-nav">
+        <li class="nav-item site-header-nav-item">
+          <a class="nav-link site-header-nav-link current" href="/">Tendies</a>
+        </li>
+        <li class="nav-item site-header-nav-item">
+          <a class="nav-link site-header-nav-link" href="/">About</a>
+        </li>
+        <li class="nav-item site-header-nav-item">
+          <a class="nav-link site-header-nav-link" href="/">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <!-- SITE HEADER -->
+    <!-- MAIN -->
+    <div class="main">
       <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h1>Heading 1</h1>
-            <h2>Heading 2</h2>
-            <h3>Heading 3</h3>
-            <h4>Heading 4</h4>
-            <h5>Heading 5</h5>
-            <h6>Heading 6</h6>
-            <div class="btn-wrapper">
-              <a class="btn btn-theme" href="/">Button</a>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est ullamcorper eget nulla facilisi <strong>This is bolded text</strong> etiam dignissim diam quis enim. Fringilla est ullamcorper eget nulla. Vitae proin sagittis nisl rhoncus mattis rhoncus urna. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-            <p>Egestas maecenas pharetra convallis posuere morbi leo urna molestie at. Sit amet luctus venenatis lectus magna fringilla urna porttitor rhoncus. Urna molestie at elementum eu facilisis sed.</p>
-            <p>Id porta nibh venenatis cras sed felis eget velit. Feugiat <a href="/">vivamus at augue</a> eget arcu dictum varius duis at.</p>
-            <p>Est ullamcorper eget nulla facilisi etiam dignissim diam quis enim. Fringilla est ullamcorper eget nulla. Vitae proin sagittis nisl rhoncus mattis rhoncus urna. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+        <h1>Vue JS Tendies Tester</h1>
+        <div id="app-1">
+          <div class="content">
+            <h2>{{ title }}</h2>
+            <p>{{ message }}</p>
+            <ol>
+              <li v-for="item in items">{{ item.text }} <a v-bind:href="item.link">...Read More</a></li>
+            </ol>
+            <button class="btn btn-theme" v-on:click="reverseTitle">Click to Reverse</button>
           </div>
         </div>
       </div>
     </div>
-    <div class="main bg-dark">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h1>Heading 1</h1>
-            <h2>Heading 2</h2>
-            <h3>Heading 3</h3>
-            <h4>Heading 4</h4>
-            <h5>Heading 5</h5>
-            <h6>Heading 6</h6>
-            <div class="btn-wrapper">
-              <a class="btn btn-theme" href="/">Button</a>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est ullamcorper eget nulla facilisi <strong>This is bolded text</strong> etiam dignissim diam quis enim. Fringilla est ullamcorper eget nulla. Vitae proin sagittis nisl rhoncus mattis rhoncus urna. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-            <p>Egestas maecenas pharetra convallis posuere morbi leo urna molestie at. Sit amet luctus venenatis lectus magna fringilla urna porttitor rhoncus. Urna molestie at elementum eu facilisis sed.</p>
-            <p>Id porta nibh venenatis cras sed felis eget velit. Feugiat <a href="/">vivamus at augue</a> eget arcu dictum varius duis at.</p>
-            <p>Est ullamcorper eget nulla facilisi etiam dignissim diam quis enim. Fringilla est ullamcorper eget nulla. Vitae proin sagittis nisl rhoncus mattis rhoncus urna. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="main bg-primary">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h1>Heading 1</h1>
-            <h2>Heading 2</h2>
-            <h3>Heading 3</h3>
-            <h4>Heading 4</h4>
-            <h5>Heading 5</h5>
-            <h6>Heading 6</h6>
-            <div class="btn-wrapper">
-              <a class="btn btn-theme" href="/">Button</a>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est ullamcorper eget nulla facilisi <strong>This is bolded text</strong> etiam dignissim diam quis enim. Fringilla est ullamcorper eget nulla. Vitae proin sagittis nisl rhoncus mattis rhoncus urna. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-            <p>Egestas maecenas pharetra convallis posuere morbi leo urna molestie at. Sit amet luctus venenatis lectus magna fringilla urna porttitor rhoncus. Urna molestie at elementum eu facilisis sed.</p>
-            <p>Id porta nibh venenatis cras sed felis eget velit. Feugiat <a href="/">vivamus at augue</a> eget arcu dictum varius duis at.</p>
-            <p>Est ullamcorper eget nulla facilisi etiam dignissim diam quis enim. Fringilla est ullamcorper eget nulla. Vitae proin sagittis nisl rhoncus mattis rhoncus urna. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- MAIN -->
     <!-- SITE FOOTER -->
-    <footer id="site-footer" class="site-footer">
+    <footer id="site-footer" class="site-footer fixed-bottom">
       <div class="container">
-        <div class="row">
-        </div>
       </div>
     </footer>
     <!-- SITE FOOTER -->
@@ -93,5 +63,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="js/theme.js"></script>
   </body>
 </html>
